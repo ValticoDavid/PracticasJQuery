@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /* Obtenemos las coordenadas del mouse cuando este sobre la imagen, para lograrlo se decalra un parametro dentro de la funcion por ejemplo: e , este parametro es capazd de recoger los datos ocultos de un documento al momento de ser ejecutado un evento por ejemplo moverse en la pagina o sobre una imagen*/
+            $('img').mousemove(function(e) {
+                var mX = e.pageX;
+                var mY = e.pageY;
+
+                // Mostramos los valores en la div #info
+                $('#info').html("Mouse X: " + mX + "<br>Mouse Y: " + mY);
+            });
+        });
+    </script>
+
+    <title>Coordenadas Mouse | JQuery</title>
+</head>
+
+<body>
+    <h1>Obteniendo las coordenadas del mouse</h1>
+    <img src="IMG/31abd45b0fa076583bd9ab792fb28a10.jpg" alt="" height="615">
+
+    <div id="info"></div>
+
+</body>
+
+</html>

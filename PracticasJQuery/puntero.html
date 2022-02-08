@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Estilos iniciales
+            $('body').css({
+                'background': 'blue'
+            });
+            $('#puntero').css({
+                'position': 'absolute',
+                'width': '350px',
+                'z-index': '500'
+            });
+            $('body').css({
+                'cursor': 'none'
+            });
+
+            // El evento en este caso sera cada vez que se mueva el mouse sobre el cuerpo de la pagina
+
+            $(this).mousemove(function(e) {
+                // Recuperar las coordenadas del mouse
+                var mX = e.pageX;
+                var mY = e.pageY;
+
+                // Movemos la div '#puntero' a las mismas de mX y mY
+                $('#puntero').css({
+                    "top": (mY + 3) + "px",
+                    "left": (mX + 3) + "px"
+                });
+            });
+
+            $('button').click(function() {
+                $('#info').html("Hola que hace");
+            });
+        });
+    </script>
+
+    <title>Puntero | JQuery</title>
+</head>
+
+<body>
+    <div id="puntero">
+        <img src="IMG/gratis-png-ilustracion-de-triangulo-puntero-icono-de-mouse-de-computadora-flecha-de-cursor.png" alt="" width="25" height="25">
+    </div>
+    <img src="IMG/elves-archer-night-elves-world-of-warcraft-wallpaper-preview.jpg" alt="">
+    <button>Orpimelo</button>
+    <div id="info"></div>
+
+
+</body>
+
+</html>

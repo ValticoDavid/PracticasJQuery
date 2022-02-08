@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 4 | JQuery</title>
+
+    <!-- IMPORTAMOS Jquery-->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // .hide Lo usamos para ocultar el elemento
+            $('#ocultar').click(function() {
+                $('img').hide(2000);
+            });
+
+            // .show Lo usamos para mostrar el elemento
+            $('#mostrar').click(function() {
+                $('img').show(2000);
+            });
+
+            // .toggle Realiza un funcion, pero tambien su inversa
+            $('#alterna').click(function() {
+                $('img').toggle(2000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Mostrar y Ocultar elementos con JQuery</h1>
+    <img src="IMG/31abd45b0fa076583bd9ab792fb28a10.jpg" alt="" width="500">
+
+    <button id="ocultar">Desaparecer</button>
+    <button id="mostrar">Aparecer</button>
+    <button id="alterna">Mostrar / Ocultar</button>
+</body>
+
+</html>

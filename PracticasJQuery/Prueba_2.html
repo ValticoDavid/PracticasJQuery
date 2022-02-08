@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 2 | JQuery</title>
+
+    <!-- IMPORTAMOS Jquery-->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+
+    <!-- SECCIOÓN DE JavaScript -->
+    <script>
+        $(document).ready(function() {
+
+            $('.titulo').fadeOut(3000);
+            $('.titulo').fadeIn(4000);
+            // Seleccionamos por clase
+            $('.azul').click(function() {
+                // Accedemos el elemento que se manupulara
+                $('body').css({
+                    // Ejecutamos la instrucción a realizar
+                    "background": "blue"
+                })
+            });
+
+            $('.verde').click(function() {
+                $('body').css({
+                    "background": "green"
+                })
+            });
+
+            $('.negro').click(function() {
+                $('body').css({
+                    "background": "black"
+                })
+            });
+
+            $('.naranja').click(function() {
+                $('body').css({
+                    "background": "orange"
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1 class="titulo">Cambio de fondo con JQuery</h1>
+    <button class="azul">Azul</button>
+    <button class="verde">Verde</button>
+    <button class="negro">Negro</button>
+    <button class="naranja">Naranja</button>
+
+</body>
+
+</html>

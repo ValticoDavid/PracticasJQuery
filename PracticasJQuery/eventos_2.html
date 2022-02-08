@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Evento sobre
+            $('img').mouseover(function() {
+                $('#info').html("Estas sobre la imagen");
+            });
+            // Evento fuera de
+            $('img').mouseout(function() {
+                $('#info').html("Haz salido de la imagen");
+            });
+            // Evento cuadno nos vemos sobre algun elemetno html, en este caso una imagen
+            $('img').mousemove(function() {
+                var hoy = new Date();
+                $('#datos').html(hoy.getSeconds());
+            });
+        });
+    </script>
+
+    <title>Eventos | JQuery</title>
+</head>
+
+<body>
+    <img src="IMG/elves-archer-night-elves-world-of-warcraft-wallpaper-preview.jpg" alt="">
+    <div id="info"></div>
+    <div id="datos"></div>
+
+</body>
+
+</html>

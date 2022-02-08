@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Estilos iniciales
+            $('img').css({
+                'opacity': '0.5'
+            });
+            // Sobre
+            $('img').hover(function() {
+                    $('#info').html("Estas sobre");
+                    $(this).css({
+                        'opacity': '1'
+                    });
+                },
+                function() {
+                    $('#info').html("Estas fuera");
+                    $(this).css({
+                        'opacity': '0.5'
+                    });
+                });
+        });
+    </script>
+
+    <title>Eventos parte 2 | JQuery</title>
+</head>
+
+<body>
+    <img src="IMG/31abd45b0fa076583bd9ab792fb28a10.jpg" alt="" height="650">
+    <br>
+    <img src="IMG/elves-archer-night-elves-world-of-warcraft-wallpaper-preview.jpg" alt="">
+    <br>
+    <img src="IMG/bQjgCQSxtIGrVqQxst_Ot_esOFEZp4wQ4LIOo3e5XqI.jpg" alt="" height="650" width="950">
+
+    <div id="info"></div>
+</body>
+
+</html>

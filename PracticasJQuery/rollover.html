@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#encender').click(function() {
+                $('#foco').attr('src', 'IMG/pic_bulbon.gif');
+            });
+            $('#apagar').click(function() {
+                $('#foco').attr('src', 'IMG/pic_bulboff.gif');
+            });
+        });
+    </script>
+
+    <title>Encender Foco</title>
+</head>
+
+<body>
+    <img id="foco" src="IMG/pic_bulboff.gif" alt="">
+    <button id="encender">Encender</button>
+    <button id="apagar">Apagar</button>
+</body>
+
+</html>

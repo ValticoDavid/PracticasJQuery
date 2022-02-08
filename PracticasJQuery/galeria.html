@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Estilos inicales
+            $('.mini').css({
+                'opacity': '0.3'
+            });
+            // Sobre
+            $('.mini').hover(function() {
+                    $('.mini').html("Estas sobre");
+                    $(this).css({
+                        'opacity': '1'
+                    });
+                },
+                function() {
+                    $('.mini').html("Estas fuera");
+                    $(this).css({
+                        'opacity': '0.3'
+                    });
+                });
+            $('.mini').click(function() {
+                // Variable para obtener la ruta 'src' de la imagen que se dio click
+                var ruta = $(this).attr('src');
+                // Cambiamos el valor del atributo 'src' de la imagen que tiene el id "visor" por la ruta obtenida
+                $('#visor').attr('src', ruta);
+            });
+        });
+    </script>
+
+    <title>Galeria | JQuery</title>
+</head>
+
+<body>
+    <h1>Mi galeria</h1>
+    <table align="center">
+        <tr>
+            <td colspan="5">
+                <img id="visor" src="IMG/galeria/321265.jpg" alt="" width="800" height="500">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="IMG/galeria/321265.jpg" alt="" class="mini" width="160" height="85">
+            </td>
+            <td>
+                <img src="IMG/galeria/3SY9k1K.png" alt="" class="mini" width="160" height="85">
+            </td>
+            <td>
+                <img src="IMG/galeria/b7faeab24189e6d798d7ee8eec85f082.jpg" alt="" class="mini" width="160" height="85">
+            </td>
+            <td>
+                <img src="IMG/galeria/bQjgCQSxtIGrVqQxst_Ot_esOFEZp4wQ4LIOo3e5XqI.jpg" alt="" class="mini" width="160" height="85">
+            </td>
+            <td>
+                <img src="IMG/galeria/world-of-warcraft-azeroth-viaje-papel-pintado-1920x1080-20058_48.jpg" alt="" class="mini" width="160" height="85">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

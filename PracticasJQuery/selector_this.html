@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                /*THIS permite identificar el elemento en foco(en uso) durante ese instante. Esto sirve cuadno se programa un elemento de forma grupal*/
+                $(this).hide();
+            });
+        });
+    </script>
+
+    <title>Selector | THIS</title>
+</head>
+
+<body>
+    <p>Da click en cualquiera de de los botones</p>
+    <button>UNO</button>
+    <button>DOS</button>
+    <button>TRES</button>
+    <button>CUATRO</button>
+    <button>CINCO</button>
+
+</body>
+
+</html>

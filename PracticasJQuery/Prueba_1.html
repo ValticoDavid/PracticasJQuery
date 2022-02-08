@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 | JQuery</title>
+
+    <!-- IMPORTAMOS Jquery-->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+
+    <!-- SECCION DE JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Selección por etiqueta
+            $('h1').css({
+                "color": "#0000ff"
+            });
+
+            // Selección por id
+            $('#subtema').fadeOut(2000);
+            $('#subtema').fadeIn(3000);
+
+            // Selección por clase
+            $('.boton').click(function() {
+                $('p').html('Que tengas un exelente día');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Introducción a JQuery</h1>
+    <h3 id="subtema">Que es JQuery</h3>
+    <p>Hola a todos</p>
+    <button class="boton">Precioname</button>
+
+</body>
+
+</html>

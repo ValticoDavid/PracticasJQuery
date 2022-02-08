@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando Animaciones | JQuery</title>
+
+    <style>
+        #bola {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(74, 173, 230);
+            border: solid 2px black;
+            border-radius: 10px;
+            position: relative;
+        }
+    </style>
+
+    <!-- JQuery -->
+    <script src="Librerias/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var bola = $('#bola');
+            bola.animate({
+                "left": "+=150"
+            }, "slow");
+            bola.animate({
+                "top": "+=150"
+            }, "slow");
+            bola.animate({
+                "left": "-=150"
+            }, "slow");
+            bola.animate({
+                "top": "-=150"
+            }, "slow");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="bola"></div>
+</body>
+
+</html>
